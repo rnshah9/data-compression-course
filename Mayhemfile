@@ -1,5 +1,5 @@
 project: data-compression-course
-target: data-compression-course
+target: compress
 testsuite:
   - file://test
 
