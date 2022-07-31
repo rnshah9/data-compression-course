@@ -7,11 +7,5 @@ COPY . /repo
 WORKDIR /repo/2_integer_codes/code
 RUN g++ -o compress compress.cpp
 
-RUN mkdir -p /deps
-RUN ldd /repo/2_integer_codes/code/compress | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I % sh -c 'cp % /deps;'
-
 FROM ubuntu:22.04 as package
-
-COPY --from=builder /deps /deps
-COPY --from=builder /repo/2_integer_codes/code/compress /repo/2_integer_codes/code/compress
-ENV LD_LIBRARY_PATH=/deps
+COPY --from=builder /repo/2_integer_codes/code/compress /

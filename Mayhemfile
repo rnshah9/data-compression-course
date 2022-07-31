@@ -4,6 +4,6 @@ testsuite:
   - file://test
 
 cmds:
-  - cmd: /repo/2_integer_codes/code/compress gamma @@ /dev/null
+  - cmd: /compress gamma @@ /dev/null
     env:
       DISABLE_SMOKETEST: '1'
