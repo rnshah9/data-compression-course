@@ -51,7 +51,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - mayhem/Mayhemfile_compress
+          - mayhem/Mayhemfile_lsbll
 
     steps:
       - uses: actions/checkout@v2

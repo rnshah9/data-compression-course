@@ -1,0 +1,6 @@
+project: data-compression-course
+target: lsbll
+
+cmds:
+  - cmd: /fuzz_lsbll
+    libfuzzer: true
